@@ -14,10 +14,11 @@ import java.util.List;
  */
 public interface BookShopService {
 
-    @FormUrlEncoded
-    @POST("/login")
-    Call<ResponseBody> login(@Field("userid") String userid,@Field("password") String password,
-                             @Field("mac") String mac);
+    @POST("login")
+    Call<ResponseBody> login(@Body UserLogin login);
+
+    @POST("signup")
+    Call<ResponseBody> register(@Body UserLogin login);
 
     @GET("getbooklist")
     Call<List<Book>> listBooks(@Query("from") int from,@Query("count") int count);
@@ -25,7 +26,7 @@ public interface BookShopService {
     class Factory{
         public static BookShopService create() {
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://10.51.30.47:32768/")
+                    .baseUrl("http://10.51.30.47:32768/api/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();
