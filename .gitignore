@@ -46,7 +46,6 @@ captures/
 
 
 # Origin
-*.iml
 .gradle
 /local.properties
 /.idea/workspace.xml
