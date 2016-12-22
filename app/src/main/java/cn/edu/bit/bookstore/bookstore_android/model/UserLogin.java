@@ -5,9 +5,9 @@ package cn.edu.bit.bookstore.bookstore_android.model;
  */
 public class UserLogin {
 
-    String userid;
-    String passwd;
-    String mac;
+    public String userid;
+    public String passwd;
+    public String mac;
 
     public UserLogin(String userid, String passwd, String mac) {
         this.userid = userid;
