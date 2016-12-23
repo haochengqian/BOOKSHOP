@@ -8,7 +8,7 @@ import android.widget.TextView;
 import cn.edu.bit.bookstore.bookstore_android.R;
 
 /**
- * Created by Haochengqian on 16/12/16.
+ * Created by erfli on 6/15/16.
  */
 public class ViewHolder extends RecyclerView.ViewHolder {
     // each data item is just a string in this case

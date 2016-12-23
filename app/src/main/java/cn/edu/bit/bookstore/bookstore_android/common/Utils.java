@@ -6,8 +6,9 @@ import android.graphics.Point;
 import android.os.Build;
 import android.view.Display;
 import android.view.WindowManager;
+
 /**
- * Created by Haochengqian on 16/12/16.
+ * Created by froger_mcs on 05.11.14.
  */
 public class Utils {
     private static int screenWidth = 0;

@@ -21,7 +21,7 @@ import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.example.DetailFragment;
 
 /**
- * Created by Haochengqian on 16/12/16.
+ * Created by Chenyc on 15/7/1.
  */
 public class BookDetailActivity extends AppCompatActivity {
 

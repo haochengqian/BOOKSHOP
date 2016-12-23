@@ -11,7 +11,7 @@ import android.widget.TextView;
 import cn.edu.bit.bookstore.bookstore_android.R;
 
 /**
- * Created by Haochengqian on 16/12/16.
+ * Created by Chenyc on 2015/6/29.
  */
 public class DetailFragment extends Fragment {
 
