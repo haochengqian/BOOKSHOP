@@ -5,31 +5,25 @@
     android:orientation="vertical">
 
     <include layout="@layout/include_toolbar" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:layout_height="562dp"
+        android:paddingTop="1dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
-
-        <ImageView android:src="@drawable/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
-
         <!-- Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_name"
+            <EditText android:id="@+id/input_userid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="Name" />
+                android:hint="用户ID" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Address Label -->
@@ -38,11 +32,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_address"
+            <EditText android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPostalAddress"
-                android:hint="Address" />
+                android:hint="用户名" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -53,11 +47,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_email"
+            <EditText android:id="@+id/input_bookdesp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Email" />
+                android:hint="书目描述" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -67,11 +61,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_mobile"
+            <EditText android:id="@+id/input_imageurl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Mobile Number" />
+                android:hint="书籍图片链接" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Password Label -->
@@ -80,11 +74,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_password"
+            <EditText android:id="@+id/input_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Password"/>
+                android:hint="理想价格"/>
         </android.support.design.widget.TextInputLayout>
 
         <!-- Password Re-enter Label -->
@@ -93,30 +87,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_reEnterPassword"
+            <EditText android:id="@+id/input_classification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Re-enter Password"/>
+                android:hint="图书类别"/>
         </android.support.design.widget.TextInputLayout>
 
         <!-- Signup Button -->
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_signup"
-            android:layout_width="fill_parent"
+            android:id="@+id/btn_addbook"
+            android:layout_width="346dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:text="Create Account"/>
-
-        <TextView android:id="@+id/link_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Already a member? Login"
-            android:gravity="center"
-            android:textSize="16dip"/>
+            android:layout_gravity="center_horizontal"
+            android:text="提交售书申请"/>
 
     </LinearLayout>
 </LinearLayout>

@@ -31,6 +31,9 @@
         <activity
             android:name=".book.BookDetailActivity"
             android:theme="@style/DrawerLayoutTheme" />
+        <activity
+            android:name=".view.SellActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
