@@ -8,7 +8,7 @@ import android.view.Display;
 import android.view.WindowManager;
 
 
-public class Utils {
+public class CommonUtils {
     private static int screenWidth = 0;
     private static int screenHeight = 0;
 

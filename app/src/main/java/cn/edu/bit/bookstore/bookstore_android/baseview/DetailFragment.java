@@ -1,4 +1,4 @@
-package cn.edu.bit.bookstore.bookstore_android.example;
+package cn.edu.bit.bookstore.bookstore_android.baseview;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

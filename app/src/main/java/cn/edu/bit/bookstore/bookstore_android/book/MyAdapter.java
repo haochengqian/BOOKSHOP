@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import cn.edu.bit.bookstore.bookstore_android.R;
-import cn.edu.bit.bookstore.bookstore_android.common.Utils;
+import cn.edu.bit.bookstore.bookstore_android.common.CommonUtils;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         if (position > lastAnimatedPosition) {
             lastAnimatedPosition = position;
-            view.setTranslationY(Utils.getScreenHeight(booksFragment.getActivity()));
+            view.setTranslationY(CommonUtils.getScreenHeight(booksFragment.getActivity()));
             view.animate()
                     .translationY(0)
                     .setStartDelay(100 * position)

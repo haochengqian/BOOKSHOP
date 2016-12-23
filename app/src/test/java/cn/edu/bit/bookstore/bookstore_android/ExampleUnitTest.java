@@ -1,6 +1,6 @@
 package cn.edu.bit.bookstore.bookstore_android;
 
-import cn.edu.bit.bookstore.bookstore_android.model.Book;
+import cn.edu.bit.bookstore.bookstore_android.book.Book;
 import cn.edu.bit.bookstore.bookstore_android.utils.BookShopService;
 import cn.edu.bit.bookstore.bookstore_android.model.UserLogin;
 import okhttp3.ResponseBody;

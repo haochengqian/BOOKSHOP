@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import cn.edu.bit.bookstore.bookstore_android.R;
-import cn.edu.bit.bookstore.bookstore_android.example.DetailFragment;
+import cn.edu.bit.bookstore.bookstore_android.baseview.DetailFragment;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
