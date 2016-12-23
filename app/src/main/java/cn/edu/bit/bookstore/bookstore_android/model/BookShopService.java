@@ -1,17 +1,17 @@
 package cn.edu.bit.bookstore.bookstore_android.model;
 
+import java.util.List;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.*;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Query;
 
-import java.util.List;
-
-/**
- * Created by satjd on 2016/12/20.
- */
 public interface BookShopService {
 
     @POST("login")

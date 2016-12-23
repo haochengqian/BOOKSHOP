@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 
 import cn.edu.bit.bookstore.bookstore_android.R;
 
-/**
- * Created by HaoChengqian on 16/12/23.
- */
 public class LoginFragment extends Fragment {
     private RecyclerView mRecyclerView;
     @Nullable

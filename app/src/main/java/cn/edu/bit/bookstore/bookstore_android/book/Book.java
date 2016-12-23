@@ -3,9 +3,6 @@ package cn.edu.bit.bookstore.bookstore_android.book;
 import java.io.Serializable;
 import java.util.Arrays;
 
-/**
- * Created by Chenyc on 15/6/30.
- */
 public class Book implements Serializable {
 
     private String subtitle;

@@ -10,9 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.QueryMap;
 
-/**
- * Created by erfli on 6/14/16.
- */
+
 public class AppClient {
     public interface HttpService {
         @GET("https://api.douban.com/v2/book/search")

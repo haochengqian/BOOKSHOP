@@ -9,9 +9,7 @@ import android.view.View;
 
 import cn.edu.bit.bookstore.bookstore_android.R;
 
-/**
- * Created by Chenyc on 2015/6/29.
- */
+
 public class AppBarDetailActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
