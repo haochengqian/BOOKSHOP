@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
         Intent intent = new Intent();
         intent.setClass(this,LoginActivity.class);
         startActivity(intent);
-        setTitle(R.string.navigation_example);
     }
 
     private void switchToBlog() {
