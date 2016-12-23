@@ -1,124 +1,66 @@
 package cn.edu.bit.bookstore.bookstore_android.book;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 public class Book implements Serializable {
 
-    private String subtitle;
-    private String[] author;
-    private String pubdate;
-    private String origin_title;
-    private String image;
-    private String catalog;
-    private String alt;
-    private String id;
-    private String publisher;
-    private String title;
+
+    /**
+     * desp :
+     * price : 0.00
+     * name : Mededeelingen Van Het Proefstation Voor de Java-Suikerindustrie Volume Deel.11 1921
+     * classification : all
+     * userid : uu
+     * url : https://img3.doubanio.com/spic/s14643991.jpg
+     * bookid : 84
+     */
+
+    private String desp;
+    private Double price;
+    private String name;
+    private String classification;
+    private String userid;
     private String url;
-    private String author_intro;
-    private String summary;
-    private String price;
-    private String pages;
-    private Images images;
+    private String bookid;
 
-    public Book() {
-        this.subtitle = "fdsf";
-        this.author = new String[10];
-        this.author[0] = "sdfsfdfsaf";
-        this.pubdate = "324124";
-        this.origin_title = "fdsf";
-        this.images = new Images();
-        this.catalog = "catalog";
-        this.alt = "alt";
-        this.id = "id";
-        this.publisher = "publisher";
-        this.title = "title";
-        this.url = "url";
-        this.author_intro = "author_intro";
-        this.summary = "summary";
-        this.price = "price";
-        this.pages = "pages";
+    public String getDesp() {
+        return desp;
     }
 
-    public String getSubtitle() {
-        return subtitle;
+    public void setDesp(String desp) {
+        this.desp = desp;
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
+    public Double getPrice() {
+        return price;
     }
 
-    public String[] getAuthor() {
-        return author;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
-    public void setAuthor(String[] author) {
-        this.author = author;
+    public String getName() {
+        return name;
     }
 
-    public String getPubdate() {
-        return pubdate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setPubdate(String pubdate) {
-        this.pubdate = pubdate;
+    public String getClassification() {
+        return classification;
     }
 
-    public String getOrigin_title() {
-        return origin_title;
+    public void setClassification(String classification) {
+        this.classification = classification;
     }
 
-    public void setOrigin_title(String origin_title) {
-        this.origin_title = origin_title;
+    public String getUserid() {
+        return userid;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getCatalog() {
-        return catalog;
-    }
-
-    public void setCatalog(String catalog) {
-        this.catalog = catalog;
-    }
-
-    public String getAlt() {
-        return alt;
-    }
-
-    public void setAlt(String alt) {
-        this.alt = alt;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getUrl() {
@@ -129,103 +71,11 @@ public class Book implements Serializable {
         this.url = url;
     }
 
-    public String getAuthor_intro() {
-        return author_intro;
+    public String getBookid() {
+        return bookid;
     }
 
-    public void setAuthor_intro(String author_intro) {
-        this.author_intro = author_intro;
+    public void setBookid(String bookid) {
+        this.bookid = bookid;
     }
-
-    public String getSummary() {
-        return summary;
-    }
-
-    public void setSummary(String summary) {
-        this.summary = summary;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getPages() {
-        return pages;
-    }
-
-    public void setPages(String pages) {
-        this.pages = pages;
-    }
-
-    public Images getImages() {
-        return images;
-    }
-
-    public void setImages(Images images) {
-        this.images = images;
-    }
-
-    public class Images implements Serializable {
-        private String small;
-        private String large;
-        private String medium;
-
-        public Images() {
-            this.small = "sadfsafasfasffds";
-            this.large = "asdfasf";
-            this.medium = "medium";
-        }
-
-        public String getSmall() {
-            return small;
-        }
-
-        public void setSmall(String small) {
-            this.small = small;
-        }
-
-        public String getLarge() {
-            return large;
-        }
-
-        public void setLarge(String large) {
-            this.large = large;
-        }
-
-        public String getMedium() {
-            return medium;
-        }
-
-        public void setMedium(String medium) {
-            this.medium = medium;
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "subtitle='" + subtitle + '\'' +
-                ", author=" + Arrays.toString(author) +
-                ", pubdate='" + pubdate + '\'' +
-                ", origin_title='" + origin_title + '\'' +
-                ", image='" + image + '\'' +
-                ", catalog='" + catalog + '\'' +
-                ", alt='" + alt + '\'' +
-                ", id='" + id + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", title='" + title + '\'' +
-                ", url='" + url + '\'' +
-                ", author_intro='" + author_intro + '\'' +
-                ", summary='" + summary + '\'' +
-                ", price='" + price + '\'' +
-                '}';
-    }
-
-
-
-
 }

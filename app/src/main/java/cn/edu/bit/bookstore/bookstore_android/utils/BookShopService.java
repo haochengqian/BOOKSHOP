@@ -1,16 +1,16 @@
-package cn.edu.bit.bookstore.bookstore_android.model;
+package cn.edu.bit.bookstore.bookstore_android.utils;
 
+import cn.edu.bit.bookstore.bookstore_android.book.Book;
+import cn.edu.bit.bookstore.bookstore_android.model.UserLogin;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Body;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.Query;
+import retrofit2.http.*;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BookShopService {
 
@@ -21,7 +21,10 @@ public interface BookShopService {
     Call<ResponseBody> register(@Body UserLogin login);
 
     @GET("getbooklist")
-    Call<List<Book>> listBooks(@Query("from") int from,@Query("count") int count);
+    Call<List<Book>> listBooks(@Query("from") int from, @Query("count") int count);
+
+    @GET("getbooklist")
+    Call<List<Book>> listBooks(@QueryMap Map<String,String> map);
 
     class Factory{
         public static BookShopService create() {

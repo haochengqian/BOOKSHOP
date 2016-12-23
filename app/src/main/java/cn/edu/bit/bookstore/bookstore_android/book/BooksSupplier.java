@@ -1,20 +1,21 @@
 package cn.edu.bit.bookstore.bookstore_android.book;
 
 import android.support.annotation.NonNull;
-
+import cn.edu.bit.bookstore.bookstore_android.utils.BookShopService;
 import com.google.android.agera.Result;
 import com.google.android.agera.Supplier;
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.edu.bit.bookstore.bookstore_android.common.AppClient;
-import okhttp3.OkHttpClient;
-
 public class BooksSupplier implements Supplier<Result<List<Book>>> {
 
     public String key;
+
+    private BookShopService service = BookShopService.Factory.create();
 
     public void setKey(String key) {
         this.key = key;
@@ -26,7 +27,7 @@ public class BooksSupplier implements Supplier<Result<List<Book>>> {
 
     OkHttpClient client = new OkHttpClient();
 
-    private static final String BASE_URL = "https://api.douban.com/v2/";
+    private static final String BASE_URL = "http://czwfun.cn:32768/api/";
 
     private static String getAbsoluteUrl(String relativeUrl) {
         return BASE_URL + relativeUrl;
@@ -35,15 +36,13 @@ public class BooksSupplier implements Supplier<Result<List<Book>>> {
 
     private List<Book> getBooks() {
 
-
+        //发送GET请求获取信息
         Map<String, String > params = new HashMap<>();
-        params.put("q",key);
-        params.put("start","0");
-        params.put("count","5");
+        params.put("from","0");
+        params.put("count","15");
         try {
-            BookResponse bookResponse = AppClient.httpService.getBooks(params)
-                                        .execute()
-                                        .body();
+            Call<List<Book>> bookRepo = service.listBooks(params);
+            List<Book> books = bookRepo.execute().body();
 
 //            ArrayList<Book> books;
 //            books = new ArrayList<Book>();
@@ -51,7 +50,7 @@ public class BooksSupplier implements Supplier<Result<List<Book>>> {
 //            books.add(new Book());
 //
 //            return books;
-            return bookResponse.getBooks();
+            return books;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
