@@ -97,7 +97,7 @@ public class BooksFragment extends Fragment implements Updatable {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mFabButton.setTranslationY(2 * getResources().getDimensionPixelOffset(R.dimen.btn_fab_size));
-        doSearch(getString(R.string.default_search_keyword));
+//        doSearch(getString(R.string.default_search_keyword));
     }
 
 

@@ -5,11 +5,11 @@ import android.support.annotation.NonNull;
 import com.google.android.agera.Result;
 import com.google.android.agera.Supplier;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.edu.bit.bookstore.bookstore_android.common.AppClient;
 import okhttp3.OkHttpClient;
 /**
  * Created by chenyc on 16/4/27.
@@ -41,19 +41,19 @@ public class BooksSupplier implements Supplier<Result<List<Book>>> {
         Map<String, String > params = new HashMap<>();
         params.put("q",key);
         params.put("start","0");
-        params.put("end","50");
+        params.put("count","5");
         try {
-//            BookResponse bookResponse = AppClient.httpService.getBooks(params)
-//                                        .execute()
-//                                        .body();
+            BookResponse bookResponse = AppClient.httpService.getBooks(params)
+                                        .execute()
+                                        .body();
 
-            ArrayList<Book> books;
-            books = new ArrayList<Book>();
-            books.add(new Book());
-            books.add(new Book());
-
-            return books;
-//            return bookResponse.getBooks();
+//            ArrayList<Book> books;
+//            books = new ArrayList<Book>();
+//            books.add(new Book());
+//            books.add(new Book());
+//
+//            return books;
+            return bookResponse.getBooks();
         } catch (Exception e) {
             e.printStackTrace();
             return null;

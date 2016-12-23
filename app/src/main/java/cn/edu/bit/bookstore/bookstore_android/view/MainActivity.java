@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.book.BooksFragment;
-import cn.edu.bit.bookstore.bookstore_android.example.CardViewActivity;
 import cn.edu.bit.bookstore.bookstore_android.widget.BackHandledFragment;
 
 public class MainActivity extends AppCompatActivity implements BackHandledFragment.BackHandlerInterface {
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
     private Toolbar mToolbar;
     private BackHandledFragment selectedFragment;
     private NavigationView mNavigationView;
-    private CardViewActivity temp;
 
     private static final int ANIM_DURATION_TOOLBAR = 300;
 
@@ -47,19 +45,6 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
 
 
         switchToBook();
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_cardview);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        toolbar.setTitle(R.string.title_book);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setHomeButtonEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                onBackPressed();
-//            }
-//        });
     }
 
 
@@ -69,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
     }
 
     private void switchToExample() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new ExampleFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new LoginFragment()).commit();
         mToolbar.setTitle(R.string.navigation_example);
     }
 
