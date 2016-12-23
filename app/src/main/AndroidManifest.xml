@@ -22,14 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".news.NewsListActivity" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".example.AppBarDetailActivity"
             android:theme="@style/DrawerLayoutTheme" />
         <activity
             android:name=".book.BookDetailActivity"
             android:theme="@style/DrawerLayoutTheme" />
-        <activity android:name=".news.NewsDetailActivity"></activity>
     </application>
 
 </manifest>

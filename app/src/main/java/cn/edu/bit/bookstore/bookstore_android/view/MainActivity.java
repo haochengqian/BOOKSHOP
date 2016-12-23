@@ -1,5 +1,6 @@
 package cn.edu.bit.bookstore.bookstore_android.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -47,15 +48,17 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
         switchToBook();
     }
 
-
     private void switchToBook() {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new BooksFragment()).commit();
         mToolbar.setTitle(R.string.navigation_book);
     }
 
     private void switchToExample() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new LoginFragment()).commit();
-        mToolbar.setTitle(R.string.navigation_example);
+        //       getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new LoginFragment()).commit();
+        Intent intent = new Intent();
+        intent.setClass(this,LoginActivity.class);
+        startActivity(intent);
+        setTitle(R.string.navigation_example);
     }
 
     private void switchToBlog() {
