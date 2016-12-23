@@ -1,4 +1,4 @@
-package cn.edu.bit.bookstore.bookstore_android.model;
+package cn.edu.bit.bookstore.bookstore_android.user;
 
 
 public class UserLogin {
@@ -11,5 +11,9 @@ public class UserLogin {
         this.userid = userid;
         this.passwd = passwd;
         this.mac = mac;
+    }
+
+    public String getUserid() {
+        return userid;
     }
 }

@@ -1,8 +1,8 @@
 package cn.edu.bit.bookstore.bookstore_android.utils;
 
 import cn.edu.bit.bookstore.bookstore_android.book.Book;
-import cn.edu.bit.bookstore.bookstore_android.model.UserLogin;
-import okhttp3.ResponseBody;
+import cn.edu.bit.bookstore.bookstore_android.user.UserLogin;
+import cn.edu.bit.bookstore.bookstore_android.user.UserValidation;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -15,10 +15,10 @@ import java.util.Map;
 public interface BookShopService {
 
     @POST("login")
-    Call<ResponseBody> login(@Body UserLogin login);
+    Call<UserValidation> login(@Body UserLogin login);
 
     @POST("signup")
-    Call<ResponseBody> register(@Body UserLogin login);
+    Call<UserValidation> register(@Body UserLogin login);
 
     @GET("getbooklist")
     Call<List<Book>> listBooks(@Query("from") int from, @Query("count") int count);

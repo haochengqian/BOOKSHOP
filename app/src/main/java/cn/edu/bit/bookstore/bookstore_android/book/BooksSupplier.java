@@ -2,6 +2,7 @@ package cn.edu.bit.bookstore.bookstore_android.book;
 
 import android.support.annotation.NonNull;
 import cn.edu.bit.bookstore.bookstore_android.utils.BookShopService;
+import cn.edu.bit.bookstore.bookstore_android.view.BookShopApplication;
 import com.google.android.agera.Result;
 import com.google.android.agera.Supplier;
 import okhttp3.OkHttpClient;
@@ -15,7 +16,7 @@ public class BooksSupplier implements Supplier<Result<List<Book>>> {
 
     public String key;
 
-    private BookShopService service = BookShopService.Factory.create();
+    private BookShopService service = BookShopApplication.applicationInstance.czwfunService;
 
     public void setKey(String key) {
         this.key = key;

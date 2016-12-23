@@ -64,6 +64,9 @@ public class Book implements Serializable {
     }
 
     public String getUrl() {
+        if(url==null){
+            url = "http://img3.doubanio.com/f/shire/9ec0301cff99c866e9b4f386743f612d594f1836/pics/book-default-small.gif";
+        }
         return url;
     }
 

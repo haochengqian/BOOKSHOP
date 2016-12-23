@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.book.BooksFragment;
 import cn.edu.bit.bookstore.bookstore_android.widget.BackHandledFragment;
@@ -54,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
     }
 
     private void switchToExample() {
-        //       getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new LoginFragment()).commit();
         Intent intent = new Intent();
         intent.setClass(this,LoginActivity.class);
         startActivity(intent);
