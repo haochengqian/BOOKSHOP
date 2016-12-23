@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
+        <variable name="loginHandler" type="cn.edu.bit.bookstore.bookstore_android.viewmodel.LoginHandler"/>
         <variable name="userLogin" type="cn.edu.bit.bookstore.bookstore_android.model.UserLogin"/>
     </data>
     <ScrollView
@@ -28,12 +30,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
-                <EditText android:id="@+id/input_email"
+                <EditText android:id="@+id/input_username"
                     android:text="@{userLogin.userid}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:hint="Email" />
+                    android:hint="用户名" />
             </android.support.design.widget.TextInputLayout>
 
             <!--  Password Label -->
@@ -47,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:hint="Password"/>
+                    android:hint="密码"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
@@ -57,13 +59,14 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
                 android:padding="12dp"
-                android:text="Login"/>
+                android:text="登录"
+                android:onClick="@{loginHandler.onClickLogin}"/>
 
             <TextView android:id="@+id/link_signup"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:text="No account yet? Create one"
+                android:text="新用户？请注册"
                 android:gravity="center"
                 android:textSize="16dip"/>
 
