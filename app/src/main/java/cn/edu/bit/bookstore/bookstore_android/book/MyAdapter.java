@@ -16,9 +16,6 @@ import java.util.List;
 import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.common.Utils;
 
-/**
- * Created by erfli on 6/15/16.
- */
 public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     private BooksFragment booksFragment;
     private final int mBackground;

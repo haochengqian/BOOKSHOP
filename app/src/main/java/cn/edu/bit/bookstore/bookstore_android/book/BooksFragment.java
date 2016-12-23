@@ -31,9 +31,6 @@ import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.common.ThreadPool;
 import cn.edu.bit.bookstore.bookstore_android.widget.RecyclerItemClickListener;
 
-/**
- * Created by Haochengqian on 16/12/22.
- */
 public class BooksFragment extends Fragment implements Updatable {
 
     private RecyclerView mRecyclerView;
@@ -97,7 +94,7 @@ public class BooksFragment extends Fragment implements Updatable {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mFabButton.setTranslationY(2 * getResources().getDimensionPixelOffset(R.dimen.btn_fab_size));
-        doSearch(getString(R.string.default_search_keyword));
+//        doSearch(getString(R.string.default_search_keyword));
     }
 
 

@@ -14,7 +14,6 @@ public class LoginActivity extends AppCompatActivity {
 //    @Bind(R.id.btn_login) Button _loginButton;
 //    @Bind(R.id.link_signup) TextView _signupLink;
 
-
 //    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

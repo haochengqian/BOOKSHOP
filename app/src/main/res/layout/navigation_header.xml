@@ -25,7 +25,7 @@
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="APP开发者"
+        android:text="测试账号"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
          />

@@ -7,9 +7,6 @@ import android.widget.TextView;
 
 import cn.edu.bit.bookstore.bookstore_android.R;
 
-/**
- * Created by erfli on 6/15/16.
- */
 public class ViewHolder extends RecyclerView.ViewHolder {
     // each data item is just a string in this case
     public ImageView ivBook;
