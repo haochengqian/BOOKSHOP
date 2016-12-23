@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BookStore-Android.iml" filepath="$PROJECT_DIR$/BookStore-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/agera/agera.iml" filepath="$PROJECT_DIR$/agera/agera.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
