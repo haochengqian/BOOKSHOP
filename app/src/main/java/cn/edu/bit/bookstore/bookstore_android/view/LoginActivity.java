@@ -87,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         loginButton = (Button)findViewById(R.id.btn_login);
         loginButton.setOnClickListener(loginListener);
+
     }
 
 }

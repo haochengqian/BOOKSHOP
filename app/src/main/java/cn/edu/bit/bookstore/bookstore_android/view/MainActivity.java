@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("售书申请");
         setSupportActionBar(mToolbar);
+        mToolbar.setOnMenuItemClickListener(onMenuItemClick);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open,
@@ -46,6 +48,29 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
 
         switchToBook();
     }
+
+    private void touchSellBook(){
+        Intent intent = new Intent();
+        intent.setClass(this,SellActivity.class);
+        startActivity(intent);
+    }
+
+    private Toolbar.OnMenuItemClickListener onMenuItemClick = new Toolbar.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+            String msg = "";
+            switch (menuItem.getItemId()) {
+                case R.id.action_settings:
+                    touchSellBook();
+                    break;
+            }
+
+            if(!msg.equals("")) {
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+            }
+            return true;
+        }
+    };
 
     private void switchToBook() {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new BooksFragment()).commit();
