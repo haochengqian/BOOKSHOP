@@ -1,8 +1,8 @@
 package cn.edu.bit.bookstore.bookstore_android;
 
-import cn.edu.bit.bookstore.bookstore_android.model.Book;
-import cn.edu.bit.bookstore.bookstore_android.model.BookShopService;
-import cn.edu.bit.bookstore.bookstore_android.model.UserLogin;
+import cn.edu.bit.bookstore.bookstore_android.book.Book;
+import cn.edu.bit.bookstore.bookstore_android.utils.BookShopService;
+import cn.edu.bit.bookstore.bookstore_android.user.UserLogin;
 import okhttp3.ResponseBody;
 import org.junit.Test;
 import retrofit2.Call;

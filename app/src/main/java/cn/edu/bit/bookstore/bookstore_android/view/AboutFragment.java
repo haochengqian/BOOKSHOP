@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 
 import cn.edu.bit.bookstore.bookstore_android.R;
 
-/**
- * Created by Chenyc on 15/6/27.
- */
 public class AboutFragment extends Fragment {
 
     @Nullable

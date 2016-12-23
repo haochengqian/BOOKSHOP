@@ -1,4 +1,4 @@
-package cn.edu.bit.bookstore.bookstore_android.example;
+package cn.edu.bit.bookstore.bookstore_android.baseview;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,9 +10,7 @@ import android.widget.TextView;
 
 import cn.edu.bit.bookstore.bookstore_android.R;
 
-/**
- * Created by Chenyc on 2015/6/29.
- */
+
 public class DetailFragment extends Fragment {
 
     public static DetailFragment newInstance(String info) {

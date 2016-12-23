@@ -1,8 +1,6 @@
-package cn.edu.bit.bookstore.bookstore_android.model;
+package cn.edu.bit.bookstore.bookstore_android.user;
 
-/**
- * Created by satjd on 2016/12/20.
- */
+
 public class UserLogin {
 
     public String userid;
@@ -13,5 +11,9 @@ public class UserLogin {
         this.userid = userid;
         this.passwd = passwd;
         this.mac = mac;
+    }
+
+    public String getUserid() {
+        return userid;
     }
 }

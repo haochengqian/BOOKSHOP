@@ -10,8 +10,11 @@
 
 #### 2.项目技术难点
 
-- MVVM模式（依赖Android Databinding）
-- Retrofit发送请求&Retrofit中RxJava的应用
+- Retrofit发送异步请求，UI线程接收Callback & Retrofit中RxJava的应用
+- Google响应式框架Agera的使用
+- Glide加载网络图片
+- Android应用调试方法
+- JUnit编写单元测试代码
 - 界面设计工具Sketch的使用
 - (To be continued...)
 
@@ -30,7 +33,7 @@
 
 - [x] 2016-12-20 18:38:21  App业务模型（Model）的建立
 - [x] 2016-12-22 00:34:33  登录界面完成
-- [ ] 2016-12-21 18:36:41   商品展示界面
-- [ ] 2016-12-20 18:39:09 App前端界面（View）及后端业务逻辑（ViewModel）绑定
-- [ ] 2016-12-20 18:37:32  交易及个人信息展示界面
-- [ ] 2016-12-20 18:37:55  ViewModel和Model的整合
+- [x] 2016-12-22 18:36:41   商品展示界面
+- [x] 2016-12-22 10:39:09 App前端界面（View）及后端业务逻辑（ViewModel）绑定
+- [x] 2016-12-23 18:37:32  交易及个人信息展示界面
+- [x] 2016-12-23 18:37:55  ViewModel和Model的整合

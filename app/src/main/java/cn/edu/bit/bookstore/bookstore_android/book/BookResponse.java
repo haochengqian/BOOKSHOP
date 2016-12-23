@@ -2,9 +2,6 @@ package cn.edu.bit.bookstore.bookstore_android.book;
 
 import java.util.ArrayList;
 
-/**
- * Created by erfli on 6/14/16.
- */
 public class BookResponse {
     public int count;
     public int start;

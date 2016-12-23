@@ -7,18 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
-
+import cn.edu.bit.bookstore.bookstore_android.R;
+import cn.edu.bit.bookstore.bookstore_android.common.CommonUtils;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.edu.bit.bookstore.bookstore_android.R;
-import cn.edu.bit.bookstore.bookstore_android.common.Utils;
-
-/**
- * Created by erfli on 6/15/16.
- */
 public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     private BooksFragment booksFragment;
     private final int mBackground;
@@ -45,7 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         if (position > lastAnimatedPosition) {
             lastAnimatedPosition = position;
-            view.setTranslationY(Utils.getScreenHeight(booksFragment.getActivity()));
+            view.setTranslationY(CommonUtils.getScreenHeight(booksFragment.getActivity()));
             view.animate()
                     .translationY(0)
                     .setStartDelay(100 * position)
@@ -85,12 +80,16 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         runEnterAnimation(holder.itemView, position);
         Book book = mBooks.get(position);
-        holder.tvTitle.setText(book.getTitle());
-        String desc = "作者: " + (book.getAuthor().length > 0 ? book.getAuthor()[0] : "") + "\n副标题: " + book.getSubtitle()
-                + "\n出版年: " + book.getPubdate() + "\n页数: " + book.getPages() + "\n定价:" + book.getPrice();
+        //TODO 改变页面字符串格式
+        holder.tvTitle.setText(book.getName());
+        String desc = "卖家: " + (book.getUserid().length() > 0 ? book.getUserid() : "暂无") + "\n" +
+                "价格: " + book.getPrice() + "\n" +
+                "分类: " + book.getClassification();
         holder.tvDesc.setText(desc);
+
+        //Glide加载网络图片
         Glide.with(holder.ivBook.getContext())
-                .load(book.getImage())
+                .load(book.getUrl())
                 .fitCenter()
                 .into(holder.ivBook);
     }

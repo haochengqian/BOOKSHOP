@@ -7,10 +7,8 @@ import android.os.Build;
 import android.view.Display;
 import android.view.WindowManager;
 
-/**
- * Created by froger_mcs on 05.11.14.
- */
-public class Utils {
+
+public class CommonUtils {
     private static int screenWidth = 0;
     private static int screenHeight = 0;
 

@@ -11,18 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-
+import cn.edu.bit.bookstore.bookstore_android.R;
+import cn.edu.bit.bookstore.bookstore_android.baseview.DetailFragment;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.edu.bit.bookstore.bookstore_android.R;
-import cn.edu.bit.bookstore.bookstore_android.example.DetailFragment;
-
-/**
- * Created by Chenyc on 15/7/1.
- */
 public class BookDetailActivity extends AppCompatActivity {
 
 
@@ -45,11 +40,11 @@ public class BookDetailActivity extends AppCompatActivity {
 
         mBook = (Book) getIntent().getSerializableExtra("book");
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(mBook.getTitle());
+        collapsingToolbar.setTitle(mBook.getName());
 
         ImageView ivImage = (ImageView) findViewById(R.id.ivImage);
         Glide.with(ivImage.getContext())
-                .load(mBook.getImages().getLarge())
+                .load(mBook.getUrl())
                 .fitCenter()
                 .into(ivImage);
 
@@ -58,17 +53,17 @@ public class BookDetailActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.addTab(tabLayout.newTab().setText("内容简介"));
-        tabLayout.addTab(tabLayout.newTab().setText("作者简介"));
-        tabLayout.addTab(tabLayout.newTab().setText("目录"));
+        tabLayout.addTab(tabLayout.newTab().setText("卖家信息"));
+        tabLayout.addTab(tabLayout.newTab().setText("分类"));
         tabLayout.setupWithViewPager(mViewPager);
     }
 
 
     private void setupViewPager(ViewPager mViewPager) {
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(DetailFragment.newInstance(mBook.getSummary()), "内容简介");
-        adapter.addFragment(DetailFragment.newInstance(mBook.getAuthor_intro()), "作者简介");
-        adapter.addFragment(DetailFragment.newInstance(mBook.getCatalog()), "目录");
+        adapter.addFragment(DetailFragment.newInstance(mBook.getDesp()), "内容简介");
+        adapter.addFragment(DetailFragment.newInstance(mBook.getUserid()), "卖家信息");
+        adapter.addFragment(DetailFragment.newInstance(mBook.getClassification()), "分类");
         mViewPager.setAdapter(adapter);
     }
 
