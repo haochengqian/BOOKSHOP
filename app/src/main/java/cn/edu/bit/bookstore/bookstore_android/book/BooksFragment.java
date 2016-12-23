@@ -32,7 +32,7 @@ import cn.edu.bit.bookstore.bookstore_android.common.ThreadPool;
 import cn.edu.bit.bookstore.bookstore_android.widget.RecyclerItemClickListener;
 
 /**
- * Created by Haochengqian on 16/12/22.
+ * Created by Haochengqian on 16/12/16.
  */
 public class BooksFragment extends Fragment implements Updatable {
 

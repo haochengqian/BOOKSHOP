@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 /**
- * Created by Chenyc on 15/6/30.
+ * Created by Haochengqian on 16/12/2.
  */
 public class Book implements Serializable {
 

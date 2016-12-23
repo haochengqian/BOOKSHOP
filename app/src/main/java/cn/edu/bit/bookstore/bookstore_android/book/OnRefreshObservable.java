@@ -4,6 +4,9 @@ import android.support.v4.widget.SwipeRefreshLayout;
 
 import com.google.android.agera.BaseObservable;
 
+/**
+ * Created by Haochengqian on 16/12/16.
+ */
 public class OnRefreshObservable extends BaseObservable
     implements SwipeRefreshLayout.OnRefreshListener {
 

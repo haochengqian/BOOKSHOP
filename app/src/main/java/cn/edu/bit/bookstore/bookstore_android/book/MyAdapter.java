@@ -17,7 +17,7 @@ import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.common.Utils;
 
 /**
- * Created by erfli on 6/15/16.
+ * Created by Haochengqian on 16/12/16.
  */
 public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     private BooksFragment booksFragment;

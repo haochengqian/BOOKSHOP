@@ -10,9 +10,7 @@ import cn.edu.bit.bookstore.bookstore_android.R;
 import cn.edu.bit.bookstore.bookstore_android.widget.BackHandledFragment;
 import cn.edu.bit.bookstore.bookstore_android.widget.ProgressWebView;
 
-/**
- * Created by Chenyc on 15/6/27.
- */
+
 public class BlogFragment extends BackHandledFragment {
 
     private ProgressWebView mWebView;

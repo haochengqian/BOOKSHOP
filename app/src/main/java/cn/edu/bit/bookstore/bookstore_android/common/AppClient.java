@@ -11,7 +11,7 @@ import retrofit2.http.GET;
 import retrofit2.http.QueryMap;
 
 /**
- * Created by erfli on 6/14/16.
+ * Created by Haochengqian on 16/12/16.
  */
 public class AppClient {
     public interface HttpService {

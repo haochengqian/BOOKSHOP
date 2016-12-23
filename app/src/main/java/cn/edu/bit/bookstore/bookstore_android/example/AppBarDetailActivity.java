@@ -10,7 +10,7 @@ import android.view.View;
 import cn.edu.bit.bookstore.bookstore_android.R;
 
 /**
- * Created by Chenyc on 2015/6/29.
+ * Created by Haochengqian on 16/12/16.
  */
 public class AppBarDetailActivity extends AppCompatActivity {
 

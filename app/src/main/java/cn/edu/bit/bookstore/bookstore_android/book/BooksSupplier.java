@@ -12,7 +12,7 @@ import java.util.Map;
 import cn.edu.bit.bookstore.bookstore_android.common.AppClient;
 import okhttp3.OkHttpClient;
 /**
- * Created by chenyc on 16/4/27.
+ * Created by Haochengqian on 16/12/16.
  */
 public class BooksSupplier implements Supplier<Result<List<Book>>> {
 
