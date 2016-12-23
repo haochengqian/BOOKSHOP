@@ -1,7 +1,5 @@
 package cn.edu.bit.bookstore.bookstore_android.model;
 
-import java.util.List;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -11,6 +9,8 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+
+import java.util.List;
 
 public interface BookShopService {
 
@@ -26,7 +26,7 @@ public interface BookShopService {
     class Factory{
         public static BookShopService create() {
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://10.51.30.47:32768/api/")
+                    .baseUrl("http://czwfun.cn:32768/api/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();
